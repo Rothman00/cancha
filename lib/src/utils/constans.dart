@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 MaterialColor generateColor(Color color) {
@@ -17,3 +18,6 @@ MaterialColor generateColor(Color color) {
 
 Color primarioColor() => const Color.fromRGBO(128, 185, 24, 1);
 Color secundarioColor() => const Color.fromRGBO(0, 127, 95, 1);
+
+final gWidth = Get.width;
+final gHeight = Get.height;

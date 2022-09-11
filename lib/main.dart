@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:cancha/src/utils/colors.dart';
-import 'package:cancha/src/pages/home_page.dart';
-import 'package:cancha/src/pages/login_page.dart';
+import 'src/pages/preview/preview_page.dart';
+import 'src/pages/login/login_page.dart';
+import 'src/pages/home/home_page.dart';
+import 'src/pages/deporte_page.dart';
+import 'src/pages/club_page.dart';
+import 'src/pages/map_page.dart';
+import 'src/utils/constans.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,14 +22,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Pivotea',
       theme: ThemeData(
-        primarySwatch: generateColor(const Color.fromRGBO(128, 185, 24, 1)),
-        secondaryHeaderColor: const Color.fromRGBO(0, 127, 95, 1),
+        primarySwatch: generateColor(primarioColor()),
+        secondaryHeaderColor: secundarioColor(),
         fontFamily: 'ComicNeue',
       ),
-      initialRoute: '/home',
+      initialRoute: '/preview',
       getPages: [
+        GetPage(name: '/preview', page: () => const PreviewPage()),
         GetPage(name: '/home', page: () => const HomePage()),
         GetPage(name: '/login', page: () => const LoginPage()),
+        GetPage(name: '/deporte', page: () => const DeportePage()),
+        GetPage(name: '/club', page: () => const ClubPage()),
+        GetPage(name: '/map', page: () => const MapPage()),
       ],
     );
   }

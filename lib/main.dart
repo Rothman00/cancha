@@ -1,8 +1,11 @@
+import 'package:cancha/src/pages/olvido/newpass_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'src/pages/registro/registro_page.dart';
 import 'src/pages/preview/preview_page.dart';
+import 'src/pages/olvido/codigo_page.dart';
+import 'src/pages/olvido/olvido_page.dart';
 import 'src/pages/login/login_page.dart';
 import 'src/pages/home/home_page.dart';
 import 'src/pages/deporte_page.dart';
@@ -48,8 +51,26 @@ class MyApp extends StatelessWidget {
           transitionDuration: const Duration(milliseconds: 500),
         ),
         GetPage(
+          name: '/olvido',
+          page: () => OlvidoPage(),
+          transition: Transition.downToUp,
+          transitionDuration: const Duration(milliseconds: 500),
+        ),
+        GetPage(
+          name: '/codigo',
+          page: () => CodigoPage(),
+          transition: Transition.cupertino,
+          transitionDuration: const Duration(milliseconds: 500),
+        ),
+        GetPage(
+          name: '/newpass',
+          page: () => NewPassPage(),
+          transition: Transition.fade,
+          transitionDuration: const Duration(milliseconds: 500),
+        ),
+        GetPage(
           name: '/registro',
-          page: () => const RegistroPage(),
+          page: () => RegistroPage(),
           transition: Transition.leftToRightWithFade,
           transitionDuration: const Duration(milliseconds: 500),
         ),

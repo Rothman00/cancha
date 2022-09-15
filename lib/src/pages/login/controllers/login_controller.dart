@@ -6,13 +6,13 @@ class LoginController extends GetxController {
   var password = TextEditingController().obs;
   var opcPass = true.obs;
 
-  @override
+  /* @override
   void onInit() {
     super.onInit();
     opcPass.value = true;
     usuario.value = TextEditingController(text: "");
     password.value = TextEditingController(text: "");
-  }
+  } */
 
   void ocultoVis() => opcPass.value = !opcPass.value;
 

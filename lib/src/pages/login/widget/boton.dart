@@ -9,6 +9,9 @@ Widget botonInicioSecion() {
   return Padding(
     padding: const EdgeInsets.all(20),
     child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        shape: const StadiumBorder(),
+      ),
       onPressed: () {
         print("USUARIO : ${login.usuarioText()}");
         print("PASSWORD : ${login.passwordText()}");
@@ -35,6 +38,23 @@ Widget botonRegistro() {
         style: TextStyle(
           color: primarioColor(),
         ),
+      ),
+    ),
+  );
+}
+
+Widget botonOlvide() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+    child: ElevatedButton(
+      onPressed: () => Get.toNamed("/olvido"),
+      style: ElevatedButton.styleFrom(
+        shape: const StadiumBorder(),
+        backgroundColor: Colors.black,
+      ),
+      child: const Text(
+        "Olvidé mi contraseña",
+        style: TextStyle(color: Colors.white),
       ),
     ),
   );

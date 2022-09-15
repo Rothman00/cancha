@@ -10,17 +10,15 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SizedBox(
-          height: gHeight,
-          child: Stack(
-            children: [
-              MainPic(),
-              const FadeWidget(),
-              MovieCard(),
-            ],
-          ),
+    return Scaffold(
+      body: SizedBox(
+        height: gHeight,
+        child: Stack(
+          children: [
+            MainPic(),
+            const FadeWidget(),
+            MovieCard(),
+          ],
         ),
       ),
     );

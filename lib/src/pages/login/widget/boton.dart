@@ -53,7 +53,7 @@ Widget botonOlvide() {
         backgroundColor: Colors.black,
       ),
       child: const Text(
-        "Olvidé mi contraseña",
+        "OLVIDÉ MI CONTRASEÑA",
         style: TextStyle(color: Colors.white),
       ),
     ),

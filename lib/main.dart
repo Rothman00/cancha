@@ -1,15 +1,15 @@
-import 'package:cancha/src/pages/olvido/newpass_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'src/pages/registro/registro_page.dart';
+import 'src/pages/deportes/deporte_page.dart';
 import 'src/pages/preview/preview_page.dart';
+import 'src/pages/olvido/newpass_page.dart';
 import 'src/pages/olvido/codigo_page.dart';
 import 'src/pages/olvido/olvido_page.dart';
 import 'src/pages/login/login_page.dart';
 import 'src/pages/home/home_page.dart';
-import 'src/pages/deporte_page.dart';
-import 'src/pages/club_page.dart';
+import 'src/pages/clubes/club_page.dart';
 import 'src/pages/map_page.dart';
 import 'src/utils/constans.dart';
 
@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/deporte',
-          page: () => const DeportePage(),
+          page: () => DeportePage(),
           transition: Transition.rightToLeftWithFade,
           transitionDuration: const Duration(milliseconds: 500),
         ),
